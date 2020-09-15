@@ -15,7 +15,7 @@ public class TestBase {
     @BeforeMethod
     public void setUp(){
         driver = Driver.getDriver();
-        driver.get("https://www.google.com");
+        driver.get(  ConfigReader.getProperties("URL") );
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
